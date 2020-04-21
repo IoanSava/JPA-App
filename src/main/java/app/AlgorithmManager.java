@@ -32,7 +32,12 @@ public class AlgorithmManager {
     public static void main(String[] args) {
         AlgorithmManager algorithmManager = new AlgorithmManager();
         //algorithmManager.insertRandomAlbums(NUMBER_OF_ALBUMS);
-        System.out.println(algorithmManager.solve(algorithmManager.getAllAlbums()));
+
+        List<Album> listOfAlbums = algorithmManager.solve(algorithmManager.getAllAlbums());
+        for (Album album : listOfAlbums) {
+            System.out.println(album);
+        }
+
         PersistenceUtil.getInstance().getEntityManagerFactory().close();
     }
 
@@ -52,11 +57,33 @@ public class AlgorithmManager {
         }
     }
 
-    private List<Album> getAllAlbums() {
+    public List<Album> getAllAlbums() {
         return (ArrayList<Album>) albumRepository.getAll();
     }
 
-    private List<Album> solve(List<Album> albums) {
-        return null;
+    /**
+     * A greedy iterative algorithm works. In each iteration,
+     * select an element 'album' in 'albums' arbitrarily randomly, removed
+     * 'album', together with all the elements which is conflicted with 'a',
+     * that is the elements which 'artist' is the same
+     * with 'album', or 'musicGenre'. Obviously this result
+     * is valid, since all elements which can contain conflict are removed in advance.
+     *
+     * @see <a href="https://en.wikipedia.org/wiki/3-dimensional_matching">3-dimensional matching</a>
+     */
+    public List<Album> solve(List<Album> albums) {
+        int numberOfAlbums = albums.size();
+        List<Album> listOfAlbums = new ArrayList<>();
+
+        while (numberOfAlbums > 0) {
+            Album album = albums.get(0);
+            listOfAlbums.add(album);
+
+            albums.removeIf(currentAlbum -> currentAlbum.getArtist().getId().equals(album.getArtist().getId()) ||
+                    currentAlbum.getMusicGenre().getId().equals(album.getMusicGenre().getId()));
+            numberOfAlbums = albums.size();
+        }
+
+        return listOfAlbums;
     }
 }

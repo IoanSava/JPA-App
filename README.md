@@ -1,8 +1,9 @@
+
 # JPA App
 
  - **Compulsory** - all bullets
  - **Optional** - all bullets
- - **Bonus** - 2/4 bullets 
+ - **Bonus** - all bullets 
 
 
 
@@ -49,10 +50,25 @@
  - src\main\java\jpa\repo\MusicGenreRepository
  
  - [x] Generate fake data in order to populate your database with a large number of albums.
- - src\main\java\app\AlgorithmManager
+ - src\main\java\app\AlgorithmManager\insertRandomAlbums
  
- - [ ] Implement an efficient algorithm that returns the largest set of albums such that no two albums have the same artist or belong to the same genre.
- - To do
+ - [x] Implement an efficient algorithm that returns the largest set of albums such that no two albums have the same artist or belong to the same genre.
+ - src\main\java\app\AlgorithmManager\solve
+
+Output example:
+
+    Album(id=1, name=Revival, releaseYear=2010, artist=Artist(id=1, name=Eminem, country=USA), musicGenre=MusicGenre(id=1, name=Rap))
+    Album(id=2, name=Best, releaseYear=2016, artist=Artist(id=2, name=Stromae, country=France), musicGenre=MusicGenre(id=2, name=Rock))
+    Album(id=4, name=Harp, releaseYear=2000, artist=Artist(id=16, name=Bernini, country=Zambia), musicGenre=MusicGenre(id=6, name=Pop))
+    Album(id=5, name=Acoustic Guitar, releaseYear=2014, artist=Artist(id=6, name=Pissarro, country=Sudan), musicGenre=MusicGenre(id=5, name=Classical))
+    Album(id=6, name=Harmonica, releaseYear=2000, artist=Artist(id=42, name=Donatello, country=Sweden), musicGenre=MusicGenre(id=3, name=Jazz))
+    Album(id=9, name=Organ, releaseYear=2013, artist=Artist(id=27, name=Vincent, country=Sierra Leone), musicGenre=MusicGenre(id=8, name=Experimental))
+    Album(id=19, name=Xylophone, releaseYear=2009, artist=Artist(id=4, name=Picasso, country=Monaco), musicGenre=MusicGenre(id=4, name=Electronic))
+    Album(id=25, name=Piano, releaseYear=2001, artist=Artist(id=34, name=Vincent, country=Kiribati), musicGenre=MusicGenre(id=9, name=Country))
+    Album(id=42, name=Harmonica, releaseYear=2018, artist=Artist(id=8, name=Matisse, country=Eswatini), musicGenre=MusicGenre(id=7, name=Blues))
+
+ - [x] Create test units for your algorithm using JUnit or other framework.
+ - src\test\java\AlgorithmManagerTest
 
 ## Additional files
 
