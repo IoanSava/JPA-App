@@ -1,5 +1,6 @@
 
 
+
 # JPA App
 
  :white_check_mark: **Compulsory** - all bullets
@@ -81,3 +82,7 @@ Output example:
 
 :link: Tables
  - src\resources\script.sql
+
+:pushpin: ER Diagram
+
+![ER Diagram](src/resources/ERdiagram.png)
