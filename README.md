@@ -3,7 +3,9 @@
 # JPA App
 
  :white_check_mark: **Compulsory** - all bullets
+
  :white_check_mark: **Optional** - all bullets
+
  :white_check_mark: **Bonus** - all bullets 
 
 
