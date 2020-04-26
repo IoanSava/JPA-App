@@ -49,7 +49,7 @@
 :heavy_check_mark: The application will use JDBC or JPA depending on a parameter given in an initialization file. (At least for one entity!) - **I did it for all entities**
  - init.txt
 
-## Task regarding Bonus part :star::star::star:
+## Tasks regarding Bonus part :star::star::star:
 
 :heavy_check_mark: Create support for specifying music _**genres**_ :musical_note:
  - src\main\java\jpa\entity\MusicGenre
