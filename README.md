@@ -3,43 +3,43 @@
 # JPA App
 
  :white_check_mark: **Compulsory** - all bullets
-
+ 
  :white_check_mark: **Optional** - all bullets
-
+ 
  :white_check_mark: **Bonus** - all bullets 
 
 
 
 ## Tasks regarding Compulsory part :star:
 
- :heavy_check_mark: Create a _persistence unit_ with the name *MusicAlbumsPU*
+ :heavy_check_mark: Create a _**persistence unit**_ with the name ***MusicAlbumsPU***
  - src\resources\META-INF\persistence.xml
  
- :heavy_check_mark: Create the package _entity_ in your project and define the entity classes _Artist_ and _Album_ :musical_keyboard:
+ :heavy_check_mark: Create the package _**entity**_ in your project and define the entity classes _**Artist**_ and _**Album**_
  - src\main\java\jpa\entity
  
- :heavy_check_mark: Create the package _util_ containing a class called _PersistenceUtil_. This class must contain a method for creating/returning an _EntityManagerFactory_ object. Implement the _Singleton_ desing pattern
+ :heavy_check_mark: Create the package _**util**_ containing a class called _**PersistenceUtil**_. This class must contain a method for creating/returning an _**EntityManagerFactory**_ object. Implement the _Singleton_ desing pattern
  - src\main\java\jpa\util\PersistenceUtil
  
- :heavy_check_mark: Create the package _repo_ in your project and define the classes _ArtistRepository_ and _AlbumRepository_
+ :heavy_check_mark: Create the package _repo_ in your project and define the classes _**ArtistRepository**_ and _**AlbumRepository**_
  -  src\main\java\jpa\repo
  
- :heavy_check_mark: Create the package _app_ and the main class _AlbumManager_ in order to test your application
+ :heavy_check_mark: Create the package _**app**_ and the main class _**AlbumManager**_ in order to test your application
  - src\main\java\app\AlbumManager
 
 
 ## Tasks regarding Optional part :star::star:
 
-:heavy_check_mark: Add support for _charts_ :part_alternation_mark:
+:heavy_check_mark: Add support for _**charts**_
  - src\main\java\jpa\entity\Chart.java
  - src\main\java\jpa\entity\ChartAlbum
  - src\main\java\jpa\repo\ChartRepository
  - src\main\java\jpa\repo\ChartAlbumRepository
  
-:heavy_check_mark: Create a generic _AbstractRepository_ using _generics_ in order to simplify the creation of the _repository_ classes
+:heavy_check_mark: Create a generic _**AbstractRepository**_ using _generics_ in order to simplify the creation of the _repository_ classes
  - src\main\java\jpa\repo\AbstractRepository
  
-:heavy_check_mark: Use an _AbstractFactory_ in order to create the DAO objects (the repositories) :factory:
+:heavy_check_mark: Use an _**AbstractFactory**_ in order to create the DAO objects (the repositories) :factory:
  - src\main\java\factory
  
  
@@ -51,7 +51,7 @@
 
 ## Task regarding Bonus part :star::star::star:
 
-:heavy_check_mark: Create support for specifying music _genres_ :musical_note:
+:heavy_check_mark: Create support for specifying music _**genres**_ :musical_note:
  - src\main\java\jpa\entity\MusicGenre
  - src\main\java\jpa\repo\MusicGenreRepository
  
